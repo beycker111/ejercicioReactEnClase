@@ -21,12 +21,7 @@ const Mostrar = (props) => {
                             <tr key={user.id}>
                                 <td>{user.nombre}</td>
                                 <td>{user.edad}</td>
-                                <td>
-                                    {(user.edad > 0 && user.edad <= 12) ? (<span>Niño</span> ) : ''}
-                                    {(user.edad > 12 && user.edad <= 30) ? (<span>Joven</span>) : ''}
-                                    {(user.edad > 30 && user.edad <= 50) ? (<span>Adulto</span>) : ''}
-                                    {(user.edad > 50) ? (<span>Mayor</span>) : ''}
-                                </td>
+                                <td>{user.categoriaEdad}</td>
                                 <td>{user.ocupacion}</td>
                                 <td>{user.valores.map(valor => (
                                     <span>{valor} </span>
