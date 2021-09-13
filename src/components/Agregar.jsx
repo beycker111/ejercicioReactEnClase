@@ -19,8 +19,8 @@ const Agregar = (props) => {
       <label>Nombre</label>
         <input
           placeholder="Ingrese Nombre"
-          name="nombre"
-          type="text"          
+          type="text" 
+          {...register("nombre")}         
           required
              />
 
@@ -28,10 +28,10 @@ const Agregar = (props) => {
         <input
           placeholder="Ingrese Edad"    
           type="number"
-          name="edad"          
+          {...register("edad")}          
             required/>
         <label>Elige tu ocupacion</label>
-        <select name="ocupacion">         
+        <select {...register("ocupacion")}>         
           
           <option value="Estudiante">Estudiante</option>
           <option value="Empleado">Empleado</option>

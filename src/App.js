@@ -12,19 +12,25 @@ function App() {
   const addUser = (user) => {
 
     user.id = uuidv4();
-    user.valores = ['comprimiso', 'respeto', 'perseverancia'];
-    /*
+    //user.valores = ['comprimiso', 'respeto', 'perseverancia'];
+    
     if(user.edad > 0 && user.edad <= 12){
-      user.valores = ['comprimiso', 'respeto', 'perseverancia'];
+      user.valores = ['juguetón', 'pureza', 'ternura'];
+      user.categoriaEdad = 'niño';
     }else if(user.edad > 12 && user.edad <= 30){
       user.valores = ['honradez', 'humildad', 'tenacidad'];
+      user.categoriaEdad = 'joven';
     }else if(user.edad > 30 && user.edad <= 50){
       user.valores = ['sinceridad', 'honestidad', 'sentido de pertenencia'];
+      user.categoriaEdad = 'adulto';
     }else{
       user.valores = ['madurez', 'coraje', 'bondad'];
+      user.categoriaEdad = 'mayor';
     }
-*/
     
+    alert("Al " + user.categoriaEdad + " " + user.nombre + " de " + user.edad + " años le recomendamos tener presente la " +
+          user.valores[0] + " " + user.valores[1] + " " + user.valores[2] + " como principales valores para obtener un buen resultado como " + user.ocupacion);
+
     setUsers([
       ...users,
       user
